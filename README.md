@@ -4,15 +4,15 @@ Joc PAOO - "Hammer Guy"- v 1.0.0;
 
 <strong>v 1.0.0:</strong>
 
--Implementare fereastra
+- Implementare fereastra
 
--Implementare FPS Counter
+- Implementare FPS Counter
 
--Implementare Caracter de pe Sprite Sheet
+- Implementare Caracter de pe Sprite Sheet
 
--Implementare animatii caracter (Run, Idle)
+- Implementare animatii caracter (Run, Idle)
 
--Implementare Keyboard inputs
+- Implementare Keyboard inputs
 
 <b>Bug-uri:</b> 
 
