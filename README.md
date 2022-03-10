@@ -2,7 +2,7 @@
 
 Joc PAOO - "Hammer Guy"- v 1.0.0;
 
-Bug-uri: 
+<b>Bug-uri:</b> 
 
 -Frame Skip la animatia de RUN
 
