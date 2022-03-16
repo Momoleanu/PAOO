@@ -13,7 +13,6 @@ Joc PAOO - "Hammer Guy"- v 1.1.0;
 - Animatie deficitara sarit
 
 <br></br>
-<br></br>
 
 
 <strong>Update-uri vechi</strong>
