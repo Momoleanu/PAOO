@@ -1,6 +1,21 @@
 # PAOO
 
-Joc PAOO - "Hammer Guy"- v 1.0.1;
+Joc PAOO - "Hammer Guy"- v 1.1.0;
+
+<strong>v 1.1.0:</strong>
+
+- Implementare harta de baza 
+- Implementare Collision Detection
+- Implementare Animatii suplimentare pentru Jump, Fall etc.
+- Bug fixes
+
+<strong>Bug-uri</strong>
+- Animatie deficitara sarit
+
+
+
+
+<strong>Update-uri vechi</strong>
 
 <strong>v 1.0.1:</strong>
 
