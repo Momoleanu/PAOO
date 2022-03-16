@@ -13,6 +13,7 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
     }
 
     public void mouseDragged(MouseEvent e) {
+
     }
 
     public void mouseMoved(MouseEvent e) {
@@ -21,9 +22,15 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
 
     public void mouseClicked(MouseEvent e) {
 
+        if(e.getButton()==MouseEvent.BUTTON3){
+
+            gamePanel.getGame().getPlayer().setAttacking(true);
+        }
+
     }
 
     public void mousePressed(MouseEvent e) {
+
     }
 
     public void mouseReleased(MouseEvent e) {
