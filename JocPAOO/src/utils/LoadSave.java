@@ -3,6 +3,7 @@ package utils;
 import main.Game;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,7 +12,7 @@ public class LoadSave {
 
     public static final String PLAYER_SPRITE = "css_sprites.png";
     public static final String LEVEL_SPRITE = "outside_sprites.png";
-    public static final String LEVEL_TUTORIAL = "outside_sprites.png";
+    public static final String LEVEL_TUTORIAL = "level_one_data.png";
 
     public static BufferedImage getPlayerSprite(String file) {
         BufferedImage img = null;
@@ -32,6 +33,21 @@ public class LoadSave {
             }
         }
         return img;
+    }
+
+    public static int[][] getLevel(){
+        int[][] lvlData=new int[Game.TILES_IN_HEIGHT][Game.TILES_IN_WIDTH];
+        BufferedImage img= getPlayerSprite(LEVEL_TUTORIAL);
+
+        for(int j=0;j<img.getHeight();j++)
+            for(int i=0;i<img.getWidth();++i){
+                Color color = new Color(img.getRGB(i,j));
+                int value=color.getRed();
+                if(value>=48)
+                    value=0;
+                lvlData[j][i]=value;
+            }
+        return lvlData;
     }
 }
 
