@@ -1,6 +1,13 @@
 # PAOO
 
-Joc PAOO - "Hammer Guy"- v 1.0.0;
+Joc PAOO - "Hammer Guy"- v 1.0.1;
+
+<strong>v 1.0.1:</strong>
+
+- Fix Bug-uri v 1.0.0 (Input Keyboard, Frame skip)
+- Creare animatie atac
+- Creare UPS (Updates per Second)
+- Inceput Level Manager
 
 <strong>v 1.0.0:</strong>
 
