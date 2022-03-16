@@ -1,6 +1,6 @@
 # PAOO
 
-Joc PAOO - "Hammer Guy"- v 1.0.0;
+Joc PAOO - "Hammer Guy"- v 1.0.1;
 
 <strong>v 1.0.1:</strong>
 
