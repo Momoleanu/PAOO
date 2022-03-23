@@ -4,6 +4,12 @@ Joc PAOO - "Hammer Guy"- v 1.1.0;
 
 Rulare: Clone la repository -> Open Project din IntelliJ/orice IDE care suporta Java -> Run
 
+<strong>v 1.1.1:</strong>
+
+- Bug fixes
+
+<br></br>
+
 <strong>v 1.1.0:</strong>
 
 - Implementare harta de baza 
