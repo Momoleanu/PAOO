@@ -6,7 +6,7 @@ Rulare: Clone la repository -> Open Project din IntelliJ/orice IDE care suporta 
 
 <strong>v 1.1.1:</strong>
 
-- Bug fixes
+- Bug fixes (Animatie deficitara Jump)
 
 <strong>v 1.1.0:</strong>
 
@@ -16,7 +16,7 @@ Rulare: Clone la repository -> Open Project din IntelliJ/orice IDE care suporta 
 - Bug fixes
 
 <strong>Bug-uri</strong>
-- Animatie deficitara sarit
+- Animatie deficitara Jump
 
 <br></br>
 
