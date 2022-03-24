@@ -10,8 +10,9 @@ Rulare: Clone la repository -> Open Project din IntelliJ/orice IDE care suporta 
 - Implementare GameStates cu enum 
 - Bug fixes && Code Refactoring
 
+<br></br>
 
-<strong>Update-uri vechi</strong>
+<strong>Update-uri vechi:</strong>
 
 <strong>v 1.1.1:</strong>
 
