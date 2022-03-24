@@ -6,11 +6,9 @@ Rulare: Clone la repository -> Open Project din IntelliJ/orice IDE care suporta 
 
 <strong>v 1.2.0:</strong>
 
--Implementare MenuState ( Meniu de baza -> Se apasa Enter pentru intrarea in joc)
-
--Implementare GameStates cu enum 
-
--Bug fixes && Code Refactoring
+- Implementare MenuState ( Meniu de baza -> Se apasa Enter pentru intrarea in joc)
+- Implementare GameStates cu enum 
+- Bug fixes && Code Refactoring
 
 
 <strong>v 1.1.1:</strong>
