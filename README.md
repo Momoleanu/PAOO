@@ -1,6 +1,6 @@
 # PAOO
 
-Joc PAOO - "Hammer Guy"- v 1.1.0;
+Joc PAOO - "Hammer Guy"
 
 Rulare: Clone la repository /Download as ZIP -> Open Project din IntelliJ/orice IDE care suporta Java -> Run
 
