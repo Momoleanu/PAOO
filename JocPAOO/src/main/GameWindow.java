@@ -10,7 +10,7 @@ public class GameWindow {
     public GameWindow(GamePanel gamePanel) {
         this.jframe.setDefaultCloseOperation(3);
         this.jframe.add(gamePanel);
-        this.jframe.setTitle("Hammer Guy");
+        this.jframe.setTitle("Hammer Dude");
         this.jframe.setResizable(false);
         this.jframe.pack();
         this.jframe.setLocationRelativeTo(null);

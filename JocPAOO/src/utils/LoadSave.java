@@ -35,17 +35,17 @@ public class LoadSave {
         return img;
     }
 
-    public static int[][] getLevel(){
-        int[][] lvlData=new int[Game.TILES_IN_HEIGHT][Game.TILES_IN_WIDTH];
-        BufferedImage img= getPlayerSprite(LEVEL_TUTORIAL);
+    public static int[][] getLevel() {
+        int[][] lvlData = new int[Game.TILES_IN_HEIGHT][Game.TILES_IN_WIDTH];
+        BufferedImage img = getPlayerSprite(LEVEL_TUTORIAL);
 
-        for(int j=0;j<img.getHeight();j++)
-            for(int i=0;i<img.getWidth();++i){
-                Color color = new Color(img.getRGB(i,j));
-                int value=color.getRed();
-                if(value>=48)
-                    value=0;
-                lvlData[j][i]=value;
+        for (int j = 0; j < img.getHeight(); j++)
+            for (int i = 0; i < img.getWidth(); ++i) {
+                Color color = new Color(img.getRGB(i, j));
+                int value = color.getRed();
+                if (value >= 48)
+                    value = 0;
+                lvlData[j][i] = value;
             }
         return lvlData;
     }

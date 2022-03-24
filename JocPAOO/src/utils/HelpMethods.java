@@ -44,8 +44,7 @@ public class HelpMethods {
     }
 
 
-
-    public static float GetEntityIfUnderOrAboveFloor(Rectangle2D.Float hitBox, float airSpeed){
+    public static float GetEntityIfUnderOrAboveFloor(Rectangle2D.Float hitBox, float airSpeed) {
         int currentTile = (int) (hitBox.y / Game.TILES_SIZE);
         if (airSpeed > 0) {
             // Falling - touching floor
@@ -58,7 +57,7 @@ public class HelpMethods {
 
     }
 
-    public static boolean isEntityOnFloor(Rectangle2D.Float hitBox,int[][] lvlD){
+    public static boolean isEntityOnFloor(Rectangle2D.Float hitBox, int[][] lvlD) {
 
 
         if (!IsSolid(hitBox.x, hitBox.y + hitBox.height + 1, lvlD))
