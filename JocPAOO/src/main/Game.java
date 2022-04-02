@@ -4,50 +4,52 @@ import gamestates.Gamestate;
 import gamestates.Playing;
 import gamestates.Menu;
 
+import javax.sound.sampled.UnsupportedAudioFileException;
 import java.awt.*;
+import java.io.IOException;
 
 public class Game implements Runnable {
+
     public final static int TILE_DEFAULT = 32;
-    public final static float SCALE = 2.0f;
+    public final static float SCALE = 1.5f;
     public final static int TILES_IN_WIDTH = 26;
     public final static int TILES_IN_HEIGHT = 14;
     public final static int TILES_SIZE = (int) (TILE_DEFAULT * SCALE);
     public final static int GAME_WIDTH = TILES_SIZE * TILES_IN_WIDTH;
     public final static int GAME_HEIGHT = TILES_SIZE * TILES_IN_HEIGHT;
-    private final int FPS_SET = 120;
-    private final int UPS_SET = 200;
-    private GameWindow gameWindow;
-    private GamePanel gamePanel = new GamePanel(this);
-    private Thread gameThread;
+    Sound sound = new Sound(Game.this);
+    private final GamePanel gamePanel = new GamePanel(this);
     private Playing playing;
     private Menu menu;
 
 
-    public Game() {
+    public Game() throws UnsupportedAudioFileException, IOException {
         initC();
         this.gamePanel.setFocusable(true);
-        this.gameWindow = new GameWindow(this.gamePanel);
+        GameWindow gameWindow = new GameWindow(this.gamePanel);
         this.gamePanel.requestFocus();
 
         this.startGameLoop();
 
     }
 
-    private void initC() {
+    private void initC() throws UnsupportedAudioFileException, IOException {
         menu = new Menu(this);
         playing = new Playing(this);
+        playMusic(0);
 
     }
 
     private void startGameLoop() {
-        this.gameThread = new Thread(this);
-        this.gameThread.start();
+        Thread gameThread = new Thread(this);
+        gameThread.start();
     }
 
     public void update() {
         switch (Gamestate.state) {
             case MENU -> menu.update();
             case PLAYING -> playing.update();
+            case OPTIONS, QUIT -> System.exit(0);
             default -> {
             }
         }
@@ -65,8 +67,10 @@ public class Game implements Runnable {
 
     @Override
     public void run() {
-        double timePerFrame = 1000000000 / FPS_SET;
-        double timePerUpdate = 1000000000 / UPS_SET;
+        int FPS_SET = 120;
+        double timePerFrame = 1_000_000_000 / FPS_SET;
+        int UPS_SET = 200;
+        double timePerUpdate = 1_000_000_000 / UPS_SET;
         long prevTime = System.nanoTime();
 
         int frames = 0;
@@ -122,5 +126,18 @@ public class Game implements Runnable {
 
     public Playing getPlaying() {
         return playing;
+    }
+
+    public void stopMusic() {
+        sound.stop();
+    }
+
+
+    public void playMusic(int i) throws UnsupportedAudioFileException, IOException {
+        if (Gamestate.state == Gamestate.MENU) {
+            sound.setFile(i);
+            sound.play();
+        } else
+            sound.stop();
     }
 }

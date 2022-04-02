@@ -10,9 +10,13 @@ import java.io.InputStream;
 
 public class LoadSave {
 
-    public static final String PLAYER_SPRITE = "css_sprites.png";
-    public static final String LEVEL_SPRITE = "outside_sprites.png";
-    public static final String LEVEL_TUTORIAL = "level_one_data.png";
+    public static final String PLAYER_SPRITE = "images/css_sprites.png";
+    public static final String LEVEL_SPRITE = "images/outside_sprites.png";
+    public static final String LEVEL_TUTORIAL = "images/level_one_data.png";
+    public static final String MENU_BUTTONS = "images/button_atlas.png";
+    public static final String MENU_BG = "images/menu_background.png";
+    public static final String BG = "images/bg_menu.jpg";
+    public static final String LEVEL_ONE_BG = "images/bg.jpg";
 
     public static BufferedImage getPlayerSprite(String file) {
         BufferedImage img = null;
@@ -20,6 +24,7 @@ public class LoadSave {
         InputStream is = LoadSave.class.getResourceAsStream("/" + file);
 
         try {
+            assert is != null;
             img = ImageIO.read(is);
 
         } catch (IOException e) {
@@ -27,6 +32,7 @@ public class LoadSave {
             e.printStackTrace();
         } finally {
             try {
+                assert is != null;
                 is.close();
             } catch (IOException e) {
                 e.printStackTrace();

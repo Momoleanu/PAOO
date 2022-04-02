@@ -8,12 +8,10 @@ import javax.swing.*;
 
 import static main.Game.GAME_WIDTH;
 import static main.Game.GAME_HEIGHT;
-import static utils.Constants.PlayerConstants.*;
-import static utils.Constants.Directions.*;
 
 
 public class GamePanel extends JPanel {
-    private Game game;
+    private final Game game;
 
     public GamePanel(Game game) {
         this.addKeyListener(new KeyboardInputs(this));

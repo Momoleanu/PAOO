@@ -1,41 +1,36 @@
 package entities;
 
+import gamestates.Gamestate;
 import utils.LoadSave;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
 import static utils.Constants.PlayerConstants.*;
-import static utils.HelpMethods.*;
+import static utils.Checks.*;
 
 import main.Game;
 
 public class Player extends Entity {
 
-    private int animationTick, animationIndex, animationSpeed = 15;
+    private int animationTick;
+    private int animationIndex;
     private int playerAction = IDLE;
-    private boolean left, up, right, down, jump;
-    private boolean isMoving = false, isAttacking = false;
-    private float playerSpeed = 1.0f;
     private int[][] lvlD;
-    private float xOff = 12 * Game.SCALE;
-    private float yOff = 16 * Game.SCALE;
-
-    //Jump+Grav;
 
     private float airSpeed = 0f;
-    private float gravity = 0.04f * Game.SCALE;
-    private float jumpSpeed = -2.25f * Game.SCALE;
-    private float fallSpeedAfterCol = 0.5f * Game.SCALE;
+
+    private boolean left, up, right, down, jump;
+    private boolean isMoving = false, isAttacking = false;
     private boolean inAir = false;
 
-
+    private Gamestate gamest;
     private BufferedImage[][] animations;
 
     public Player(float x, float y, int width, int height) {
         super(x, y, width, height);
         loadAnimations();
-        initHitBox(x, y, 31 * Game.SCALE, 28 * Game.SCALE);
+        initHitBox(x, y);
     }
 
     public void update() {
@@ -47,13 +42,18 @@ public class Player extends Entity {
 
     public void render(Graphics g) {
 
+        float xOff = 12 * Game.SCALE;
+        float yOff = 16 * Game.SCALE;
         g.drawImage(animations[playerAction][animationIndex], (int) (hitBox.x - xOff), (int) (hitBox.y - yOff), width, height, null);
-        // drawHitBox(g);
+
+
+        drawHitBox(g);
     }
 
     private void updateAnimationTick() {
 
         animationTick++;
+        int animationSpeed = 15;
         if (animationTick >= animationSpeed) {
             animationTick = 0;
             animationIndex++;
@@ -113,6 +113,7 @@ public class Player extends Entity {
 
         float xSpeed = 0;
 
+        float playerSpeed = Game.SCALE;
         if (left)
             xSpeed -= playerSpeed;
         if (right)
@@ -125,10 +126,12 @@ public class Player extends Entity {
         if (inAir) {
             if (CanMoveHere(hitBox.x, hitBox.y + airSpeed, hitBox.width, hitBox.height, lvlD)) {
                 hitBox.y += airSpeed;
+                float gravity = 0.04f * Game.SCALE;
                 airSpeed += gravity;
                 updateXPos(xSpeed);
             } else {
                 hitBox.y = GetEntityIfUnderOrAboveFloor(hitBox, airSpeed);
+                float fallSpeedAfterCol = 0.5f * Game.SCALE;
                 if (airSpeed > 0)
                     resetAir();
                 else
@@ -146,7 +149,7 @@ public class Player extends Entity {
         if (inAir)
             return;
         inAir = true;
-        airSpeed = jumpSpeed;
+        airSpeed = -2.25f * Game.SCALE;
     }
 
     private void resetAir() {
