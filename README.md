@@ -10,7 +10,6 @@ Rulare: Clone la repository /Download as ZIP -> Open Project din IntelliJ/orice 
 - Implementare Background sounds
 - Bug fixes && Code Refactoring
 
-
 <br></br>
 
 <strong>Update-uri vechi:</strong>
