@@ -4,15 +4,22 @@ Joc PAOO - "Hammer Guy"
 
 Rulare: Clone la repository /Download as ZIP -> Open Project din IntelliJ/orice IDE care suporta Java -> Run
 
+<strong>v 1.3.0:</strong>
+
+- Implementare interfata grafica Meniu
+- Implementare Background sounds
+- Bug fixes && Code Refactoring
+
+
+<br></br>
+
+<strong>Update-uri vechi:</strong>
+
 <strong>v 1.2.0:</strong>
 
 - Implementare MenuState ( Meniu de baza -> Se apasa Enter pentru intrarea in joc)
 - Implementare GameStates cu enum 
 - Bug fixes && Code Refactoring
-
-<br></br>
-
-<strong>Update-uri vechi:</strong>
 
 <strong>v 1.1.1:</strong>
 
