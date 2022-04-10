@@ -10,6 +10,9 @@ Rulare: Clone la repository /Download as ZIP -> Open Project din IntelliJ/orice 
 - Implementare Background sounds
 - Bug fixes && Code Refactoring
 
+![image](https://user-images.githubusercontent.com/80321803/162629250-38dbdb86-1e3a-4492-a4bb-0054807fce47.png)
+
+
 <br></br>
 
 <strong>Update-uri vechi:</strong>
