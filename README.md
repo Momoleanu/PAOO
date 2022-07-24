@@ -7,6 +7,7 @@ Rulare: Clone la repository /Download as ZIP -> Open Project din IntelliJ/orice 
 
 <strong>v 2.0.0:</strong>
 
+- Delete commituri vechi. 
 - Bug fixes
 - Implementare Health bar, Win/Game Over screen
 - Implementare Atac Inamici, sistem de health atat pentru protagonist cat si pentru inamic
