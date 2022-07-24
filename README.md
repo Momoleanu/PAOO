@@ -12,18 +12,18 @@ Rulare: Clone la repository /Download as ZIP -> Open Project din IntelliJ/orice 
 - Implementare Atac Inamici, sistem de health atat pentru protagonist cat si pentru inamic
 
 
-<strong>v 1.3.0:</strong>
-
-- Implementare interfata grafica Meniu
-- Implementare Background sounds
-- Bug fixes && Code Refactoring
-
 ![image](https://user-images.githubusercontent.com/80321803/162629250-38dbdb86-1e3a-4492-a4bb-0054807fce47.png)
 
 
 <br></br>
 
 <strong>Update-uri vechi:</strong>
+
+<strong>v 1.3.0:</strong>
+
+- Implementare interfata grafica Meniu
+- Implementare Background sounds
+- Bug fixes && Code Refactoring
 
 <strong>v 1.2.0:</strong>
 
