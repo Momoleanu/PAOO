@@ -1,6 +1,6 @@
 # PAOO
 
-Joc PAOO - "Hammer Guy"
+Joc PAOO - "Hammer Dude"
 
 Rulare: Clone la repository /Download as ZIP -> Open Project din IntelliJ/orice IDE care suporta Java -> Run
 
