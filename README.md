@@ -10,7 +10,7 @@ Rulare: Clone la repository /Download as ZIP -> Open Project din IntelliJ/orice 
 - Bug fixes
 - Implementare Health bar, Win/Game Over screen
 - Implementare Atac Inamici, sistem de health atat pentru protagonist cat si pentru inamic
-
+- Implementare baze de date pentru salvarea scorului in Sqlite
 
 ![image](https://user-images.githubusercontent.com/80321803/162629250-38dbdb86-1e3a-4492-a4bb-0054807fce47.png)
 
